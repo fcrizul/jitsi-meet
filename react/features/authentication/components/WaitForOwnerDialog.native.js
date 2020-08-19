@@ -47,7 +47,7 @@ class WaitForOwnerDialog extends Component<Props> {
 
         // Bind event handlers so they are only bound once per instance.
         this._onCancel = this._onCancel.bind(this);
-        this._onLogin = this._onLogin.bind(this);
+        //this._onLogin = this._onLogin.bind(this);
     }
 
     /**
@@ -70,9 +70,10 @@ class WaitForOwnerDialog extends Component<Props> {
                         params: { room }
                     }
                 }
-                okKey = 'dialog.Ok'
+                //okKey = 'dialog.Ok'
                 onCancel = { this._onCancel }
-                onSubmit = { this._onLogin } />
+                //onSubmit = { this._onLogin } 
+            />
         );
     }
 
@@ -88,7 +89,7 @@ class WaitForOwnerDialog extends Component<Props> {
         this.props.dispatch(cancelWaitForOwner());
     }
 
-    _onLogin: () => void;
+    //_onLogin: () => void;
 
     /**
      * Called when the OK button is clicked.
@@ -96,9 +97,11 @@ class WaitForOwnerDialog extends Component<Props> {
      * @private
      * @returns {void}
      */
+    /*
     _onLogin() {
         this.props.dispatch(_openLoginDialog());
     }
+    */
 }
 
 /**

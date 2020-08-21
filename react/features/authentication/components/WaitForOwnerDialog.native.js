@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import type { Dispatch } from 'redux';
 
-import { ConfirmDialog } from '../../base/dialog';
+import { AlertDialog } from '../../base/dialog';
 import { translate } from '../../base/i18n';
 import { connect } from '../../base/redux';
 import { cancelWaitForOwner, _openLoginDialog } from '../actions';
@@ -62,7 +62,7 @@ class WaitForOwnerDialog extends Component<Props> {
         } = this.props;
 
         return (
-            <ConfirmDialog
+            <AlertDialog
                 cancelKey = 'dialog.Cancel'
                 contentKey = {
                     {
